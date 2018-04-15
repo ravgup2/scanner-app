@@ -38,6 +38,6 @@ module.exports.routes = {
   * not match any of those, it is matched against static assets.             *
   *                                                                          *
   ***************************************************************************/
-  'post /reviewes/search': { controller: 'ReviewesController', action:'search' },
-  'get /reviewes/batch/:batchId': { controller: 'ReviewesController', action:'searchByBatchId' }
+  'post /reviews/search': { controller: 'ReviewsController', action:'search' },
+  'get /reviews/batch/:batchId': { controller: 'ReviewsController', action:'searchByBatchId' }
 };

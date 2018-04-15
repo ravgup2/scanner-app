@@ -1,5 +1,5 @@
 /**
- * ReviewesController
+ * ReviewsController
  *
  * @description :: Server-side actions for handling incoming requests.
  * @help        :: See https://sailsjs.com/docs/concepts/actions
@@ -14,10 +14,10 @@ module.exports = {
 			res.send('Missing Parameters');
 		}
 		var query = {
-			datetime: { '>=': params.fromDate, '<': params.toDate }
+			date: { '>=': params.fromDate, '<=': params.toDate }
 		};
 
-		Reviewes.find({
+		Reviews.find({
 		  where: query,
 		  sort: 'createdAt DESC'
 		}).exec(function (err, results) {
@@ -32,7 +32,7 @@ module.exports = {
 			res.send('Missing Parameters');
 		}
 
-		Reviewes.find({
+		Reviews.find({
 		  batchId: batchId
 		}).exec(function (err, results) {
 			res.send(results);
