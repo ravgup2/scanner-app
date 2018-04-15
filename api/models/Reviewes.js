@@ -8,12 +8,20 @@
 module.exports = {
 
   attributes: {
+    batchId: {
+        type: 'string'
+    },
     datetime: {
       type: 'string',
       columnType: 'datetime',
       defaultsTo: new Date().toISOString()
     },
-
+    date: {
+        type: 'string'
+    },
+    time: {
+        type: 'string'
+    },
     agency: {
       type: 'string'
     },

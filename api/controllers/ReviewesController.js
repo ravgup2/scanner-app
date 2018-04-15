@@ -23,6 +23,21 @@ module.exports = {
 		}).exec(function (err, results) {
 		  	res.send(results);
 		});
-	}
-};
+	},
 
+	searchByBatchId: function (req, res) {
+		var batchId = req.param('batchId');
+		if(!batchId) {
+			res.status(422);
+			res.send('Missing Parameters');
+		}
+
+		Reviewes.find({
+		  batchId: batchId
+		}).exec(function (err, results) {
+			res.send(results);
+		});
+	},
+
+
+};
